@@ -1,26 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 /**
 * main - Entry point
 *
-* program prints all the numbers of base 16 in lowercase
-* program uses only the putchar function
+* program prints all numbers of base16 in lowercase.
+* You can only use putchar, 3 times, max.
 *
-* Return: Always 0 (Success)
+* Return: 0
 */
 
 int main(void)
 {
+char c;
 int i;
-char a;
-for (i = '0'; i <= '9'; ++i)
-putchar((i) + '0');
 
-for (a = 'a'; a <= 'f'; ++a)
-putchar(a);
-
+for (i = 0; i < 10; i++)
+{
+putchar(i + '0');
+}
+for (c = 'a'; c < 'g'; c++)
+{
+putchar(c);
+}
 putchar('\n');
 
 return (0);
