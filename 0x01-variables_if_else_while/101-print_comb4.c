@@ -10,36 +10,37 @@
 
 int main(void)
 {
-  int i, j;
-  int a, b, c, d;
+int a = 0;
+	int b = 0;
+	int c = 0;
+	int coma = 1;
 
-  for (i = 0; i < 100; i++)
-    {
-      a = i / 10;
-      b = i % 10;
-
-      for (j = 0; j < 100; j++)
+	while (a <= 9)
 	{
-	  c = j / 10;
-	  d = j % 10;
-
-	  if (a < c || (a == c && b < d))
-	    {
-	      putchar(a + '0');
-	      putchar(b + '0');
-	      putchar(32);
-	      putchar(c + '0');
-	      putchar(d + '0');
-
-	      if (!(a == 9 && b == 8))
+		while (b <= 9)
 		{
-		  putchar(44);
-		  putchar(32);
+			while (c <= 9)
+			{
+			if (a < b && b < c)
+			{
+				if (coma == 0)
+				{
+					putchar(',');
+					putchar(32);
+				}
+				coma = 0;
+				putchar(a + '0');
+				putchar(b + '0');
+				putchar(c + '0');
+			}
+			++c;
+			}
+			++b;
+			c = 0;
 		}
-	    }
+		++a;
+		b = 0;
 	}
-    }
-  putchar(10);
-
-  return (0);
+	putchar(10);
+	return (0);
 }
