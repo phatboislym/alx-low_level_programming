@@ -1,13 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - Entry point
- * n: integer input variable
- * a: array input variable
- * p: integer input variable
- * Return: 0
-*/
-
 int main(void)
 {
 int n;
