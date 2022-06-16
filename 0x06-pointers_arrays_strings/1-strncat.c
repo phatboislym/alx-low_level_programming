@@ -2,10 +2,10 @@
 
 /**
  * _strncat - concatenate two strings
- * @dest: string
- * @src: string
- * @n: number of elements to concatenate in
- * Return: pointer to resulting `dest`
+ * @dest: string output parameter
+ * @src: string input parameter
+ * @n: number of members to concatenate in
+ * Return: pointer to resulting dest string
  */
 
 char *_strncat(char *dest, char *src, int n)
