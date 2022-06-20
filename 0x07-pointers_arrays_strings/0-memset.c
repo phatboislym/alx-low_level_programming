@@ -1,20 +1,26 @@
 #include "main.h"
 
 /**
- * _memset - fills memory with a constant byte
+*_memset - fills memory with constant byte
  * @s: pointer input parameter
- * @b: constant byte
- * @n: size of the buffer
- * Return: pointer to the memory area @s
- */
+ * @b: character to fill the memory area with
+ * @n: number of bytes to be filled
+ * Return: A pointer to address @s
+*/
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	int x = 0;
+	unsigned int y;
 
-	for (i = 0; i < n; i++)
+	while (*(s + x) != '\0')
 	{
-		s[i] = b;
+		x++;
 	}
-	return (s);
+
+	for (y = 0; y < n; y++)
+	{
+		s[y] = b;
+	}
+return (s);
 }
