@@ -5,7 +5,7 @@
 * str_concat - concatenates two strings
 * @s1: first string
 * @s2: second string
-* Return: pointer to a new NULL ending string containing s1 followed 
+* Return: pointer to a new NULL ending string containing s1 followed
 * by s2 or NULL on failure
 */
 
