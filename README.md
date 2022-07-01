@@ -24,3 +24,6 @@ alx-low_level_programming
 
 0x0B-malloc_free
 
+0x0C-more_malloc_free
+
+0x0D-preprocessor
