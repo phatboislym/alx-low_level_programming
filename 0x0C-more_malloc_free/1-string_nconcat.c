@@ -1,41 +1,68 @@
-#include "mainn.h"
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * *string_nconcat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: number of elements to be taken from s2
- * Return: pointer to s1 or NULL
- **/
+ *_strlen - determines the lenght of a string
+ *@s: array of elements
+ *Return: int i
+ */
+
+int _strlen(char *s)
+{
+	unsigned int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
+ *string_nconcat - concatenates two strings
+ *@s1: string
+ *@s2: string
+ *@n: number bytes
+ *Return: char dst
+ */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *mem;
-	int i;
-	unsigned int j;
+	unsigned int i, count, j, size, size1, size2;
 
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
-	i = 0;
-	while (s1[i] != '\0')
-		i++;
-	mem = malloc(sizeof(char) * (i + n + 1));
-	if (mem == NULL)
+
+	size1 = _strlen(s1);
+	size2 = _strlen(s2);
+
+	if (n >= size2)
+	{
+		count = size2;
+	}
+	else
+	{
+		count = n;
+	}
+	size = size1 + count + 1;
+	mem = (char *) malloc(size * sizeof(char));
+	if (mem == 0)
+	{
 		return (NULL);
-	i = j = 0;
-	while (s1[i] != '\0')
-	{
-		mem[i] = s1[i];
-		i++;
 	}
-	while (j < n && s2[j] != '\0')
 	{
-		mem[i] = s2[j];
-		i++, j++;
+		for (i = 0; *(s1 + i) != '\0'; i++)
+			*(mem + i) = *(s1 + i);
+		for (j = 0; j < count; j++)
+		{
+			*(mem + i) = *(s2 + j);
+			i++;
+		}
+		*(mem + i) = '\0';
 	}
-	mem[i] = '\0';
 	return (mem);
 }
