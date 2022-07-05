@@ -6,7 +6,7 @@
  * @name: char pointer, name of the dog
  * @age: float, age of the dog
  * @owner: char pointer, owner of the dog
- * desc: struct for new dog, three members
+ * description: struct for new dog, three members
  */
 
 struct dog
@@ -15,10 +15,6 @@ struct dog
 	float age;
 	char *owner;
 };
-
-/**
- * dog_t - typedef for struct dog type
- */
 
 typedef struct dog dog_t;
 
