@@ -7,7 +7,7 @@
 
 void print_times_table(int n)
 {
-	int row, int column, int product, int middleDigit;
+int row, column, product, middleDigit;
 
 if ((n > -1) && (n < 16))
 {
@@ -24,7 +24,7 @@ if ((n > -1) && (n < 16))
 			}
 			else
 			{
-				_putchar(32)
+				_putchar(32);
 			}
 
 			if ((product % 100 >= 0) && (product / 10 > 0))
@@ -46,4 +46,3 @@ if ((n > -1) && (n < 16))
 		_putchar(10);
 	}
 }
-
