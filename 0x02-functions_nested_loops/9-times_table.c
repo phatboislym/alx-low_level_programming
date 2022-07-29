@@ -26,6 +26,7 @@ for (row = 0; row < 10; row++)
 		else
 		{
 			_putchar(32);
+			_putchar(32);
 		}
 		_putchar((product % 10) + '0');
 		if (column < 9)
