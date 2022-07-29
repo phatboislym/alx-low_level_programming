@@ -27,7 +27,7 @@ for (row = 0; row < 10; row++)
 		{
 			_putchar(32);
 		}
-		putchar((product % 10) + '0');
+		_putchar((product % 10) + '0');
 		if (column < 9)
 		{
 			_putchar(44);
